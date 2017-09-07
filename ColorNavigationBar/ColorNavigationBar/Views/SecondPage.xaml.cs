@@ -2,9 +2,9 @@
 
 namespace ColorNavigationBar.Views
 {
-    public partial class MainPage : CustomContentPage
+    public partial class SecondPage : CustomContentPage
     {
-        public MainPage()
+        public SecondPage()
         {
             InitializeComponent();
         }

@@ -1,9 +1,5 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
+﻿using Prism.Mvvm;
 using Prism.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -61,7 +57,7 @@ namespace ColorNavigationBar.ViewModels
         /// <returns></returns>
         private async Task executeNextPageCommandAsync()
         {
-            await _navigationService.NavigateAsync($"ModalPage",null , true);
+            await _navigationService.NavigateAsync($"SecondPage");
         }
         #endregion
     }

@@ -6,9 +6,8 @@ using Xamarin.Forms;
 
 namespace ColorNavigationBar.ViewModels
 {
-    public class ModalPageViewModel : BindableBase, INavigationAware
+    public class SecondPageViewModel : BindableBase, INavigationAware
     {
-
         /// <summary>
         /// ナビゲーションサービス
         /// </summary>
@@ -21,7 +20,7 @@ namespace ColorNavigationBar.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
-        public ModalPageViewModel(
+        public SecondPageViewModel(
             INavigationService navigationService)
         {
             _navigationService = navigationService;
@@ -43,21 +42,21 @@ namespace ColorNavigationBar.ViewModels
                 Title = (string)parameters["title"] + " and Prism";
         }
 
-        #region 閉じる選択コマンド
-        private ICommand _closeCommand;
+        #region ナビゲーションアイコン選択コマンド
+        private ICommand _showModalCommand;
         /// <summary>
-        /// 閉じるコマンド
+        /// ナビゲーションアイコンコマンド
         /// </summary>
-        public ICommand CloseCommand =>
-            _closeCommand ?? (_closeCommand = new Command(async () => await executeCloseCommandAsync()));
+        public ICommand ShowModalCommand =>
+            _showModalCommand ?? (_showModalCommand = new Command(async () => await executeShowModalCommandAsync()));
 
         /// <summary>
-        /// 閉じるコマンド実行
+        /// ナビゲーションアイコンコマンド実行
         /// </summary>
         /// <returns></returns>
-        private async Task executeCloseCommandAsync()
+        private async Task executeShowModalCommandAsync()
         {
-            await _navigationService.GoBackAsync();
+            await _navigationService.NavigateAsync($"ModalPage", null, true);
         }
         #endregion
     }

@@ -20,6 +20,7 @@ namespace ColorNavigationBar
             Container.RegisterTypeForNavigation<NavigationPage>();
             Container.RegisterTypeForNavigation<MainPage>();
             Container.RegisterTypeForNavigation<ModalPage>();
+            Container.RegisterTypeForNavigation<SecondPage>();
         }
     }
 }

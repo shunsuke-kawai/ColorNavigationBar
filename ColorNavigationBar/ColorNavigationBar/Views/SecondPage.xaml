@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:CustomContentPage
+    x:Class="ColorNavigationBar.Views.SecondPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ColorNavigationBar.Controls;"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    Title="SecondPage"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    IsUseDefaultBarStyle="False"
+    NavigationBarColor="Purple">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding ShowModalCommand}" Icon="Icon-Small.png" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="SecondPage" />
+        </StackLayout>
+    </ContentPage.Content>
+</controls:CustomContentPage>
