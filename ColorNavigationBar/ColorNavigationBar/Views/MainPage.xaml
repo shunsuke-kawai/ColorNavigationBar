@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:CustomContentPage
+    x:Class="ColorNavigationBar.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ColorNavigationBar.Controls;"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    Title="MainPage"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    IsUseDefaultBarStyle="False"
+    NavigationBarColor="Green">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding NextPageCommand}" Icon="Icon-Small.png" />
+    </ContentPage.ToolbarItems>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+    </StackLayout>
+</controls:CustomContentPage>

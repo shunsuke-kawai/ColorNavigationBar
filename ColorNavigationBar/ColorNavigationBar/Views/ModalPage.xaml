@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:CustomContentPage
+    x:Class="ColorNavigationBar.Views.ModalPage"
+    xmlns:controls="clr-namespace:ColorNavigationBar.Controls;"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    IsUseDefaultBarStyle="True">
+    <ContentPage.Padding>
+        <OnPlatform
+            x:TypeArguments="Thickness"
+            Android="0"
+            WinPhone="0"
+            iOS="0,20,0,0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin Forms!" />
+            <Button Text="Close" Command="{Binding CloseCommand}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</controls:CustomContentPage>
